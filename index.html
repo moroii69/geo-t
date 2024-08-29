@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker's Geolocation Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-matrix">
+    <div class="container">
+        <header>
+            <h1>Hacker's Geolocation Hub</h1>
+            <div id="clock"></div>
+            <select id="themeSelector">
+                <option value="matrix">Matrix</option>
+                <option value="cyberpunk">Cyberpunk</option>
+                <option value="midnight">Midnight</option>
+            </select>
+        </header>
+        <main>
+            <div class="control-panel">
+                <button id="locateBtn" class="glow-button">Initiate Geolocation Sequence</button>
+                <button id="ipInfoBtn" class="glow-button">Retrieve IP Info</button>
+                <button id="networkBtn" class="glow-button">Scan Local Network</button>
+                <button id="encryptBtn" class="glow-button">Encrypt Location Data</button>
+                <button id="decryptBtn" class="glow-button">Decrypt Location Data</button>
+                <button id="wifiBtn" class="glow-button">Scan WiFi Networks</button>
+                <button id="vpnBtn" class="glow-button">Check VPN Status</button>
+                <button id="dnsBtn" class="glow-button">DNS Leak Test</button>
+                <button id="speedBtn" class="glow-button">Internet Speed Test</button>
+                <button id="whoisBtn" class="glow-button">WHOIS Lookup</button>
+            </div>
+            <div class="preview-panel">
+                <div id="map"></div>
+                <div id="locationInfo"></div>
+            </div>
+            <div id="console">
+                <div id="consoleOutput"></div>
+                <input type="text" id="consoleInput" placeholder="Enter command...">
+            </div>
+            <div id="systemInfo"></div>
+            <div id="networkInfo"></div>
+        </main>
+        <footer>
+            <div id="batteryStatus"></div>
+            <div id="connectionStatus"></div>
+            <div id="vpnStatus"></div>
+        </footer>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Access Granted</h2>
+            <p>Welcome, hacker. Use this power responsibly.</p>
+            <button id="modalClose">Acknowledge</button>
+        </div>
+    </div>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "2C-KjV9owQL5AnW_W",
+  });
+})();
+</script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
